@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/grid900.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/custom.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+ 
+  <!-- nav header -->
+  <nav>
+    <div class="nav-wrapper white">
+      <a hhref="index.html" class="brand-logo">Logo</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <!-- menu desktop -->
+      <ul class="right hide-on-med-and-down">
+        <li><a href="badges.html">Nicole Vanni</a></li>
+        <li><a href="#">
+          <i class="grey-text text-lighten-1 medium material-icons">notifications</i></a></li>
+        <li>
+          <a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="grey-text 
+            text-lighten-1 medium material-icons right">account_circle</i></a>
+          <!-- Dropdown Structure -->
+          <ul id='dropdown1' class='dropdown-content grey-text'>
+      <!--       <li><a href="#!">one</a></li> -->
+            <li><a href="#!"><small>Selecciona de grupo</small></a></li>
+            <li><a href="#!"><i class="material-icons">info</i>Inversiones Santa Elena SA</a></li>
+            <li><a href="#!"><i class="material-icons">info</i>Inversiones Santa Blanca SA</a></li>
+            <li class="divider"></li>
+            <li><a href="#!">Administración</a></li>
+            <li><a href="#!">Grupo de Servicios</a></li>
+            <li><a href="#!">Autorizar Apoderados Virtuales</a></li>
+            <li class="divider"></li>
+            <li><a href="ayuda.html">Ayuda</a></li>
+            <li class="divider"></li>
+            <li><a href="#!">CERRAR SESIÓN</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- menu mobile -->
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">Javascript</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- grid example  -->     
+  <div class="section no-pad-bot no-pad-top" id="index-banner">
+
+    <nav>
+      <div id="tittle-breadcrums" class="nav-wrapper">
+        <div class="col s12">
+          <a href="#!" class="breadcrumb">Rentabilidad</a>
+         <!--  <a href="#!" class="breadcrumb">First</a>
+          <a href="#!" class="breadcrumb">Second</a>
+          <a href="#!" class="breadcrumb">Third</a> -->
+        </div>
+      </div>
+    </nav>
+
+    <div class="row m-bottom-0">
+      <div class="col s12">
+        <ul class="tabs">
+          <li class="tab col s3"><a class="active" href="#test1">EVA</a></li>
+          <li class="tab col s3"><a href="#test2">SOW</a></li>
+          <li class="tab col s2"><a href="#test3">SALDOS VISTAS</a></li>
+          <li class="tab col s2"><a href="#test4">COLOCACIONES</a></li>
+          <li class="tab col s2"><a href="#test4">CRUCE</a></li>
+        </ul>
+      </div>
+     <!--  <div id="test1" class="col s12">Test 1</div>
+      <div id="test2" class="col s12">Test 2</div>
+      <div id="test3" class="col s12">Test 3</div>
+      <div id="test4" class="col s12">Test 4</div> -->
+    </div>
+
+    <div class="container bg-img-grid">
+      <div class="bg-img-grid min-800 ">
+        <!--  Cuentas -->
+        <div id="financiamiento" name="financiamiento">
+          <div class="row grid-container">
+            <!-- <h6>hola esta es la referencia de CUENTAS</h6> -->
+            <div class="col s12 m6 l6 grid-example">
+              <p>s12 m12</p>
+              <p>Gráfico (Indicadores comerciales)</p>
+            </div>
+
+            <div class="col s12 m6 l6 grid-example">
+              <p>s12 m12</p>
+              <p>Gráfico (Historico)</p>
+            </div>
+
+            <div class="col s12 m4 l12 grid-example">
+              <p>s12 m12</p>
+              <p>Data Table</p>
+              <br>
+               <br>
+                <br>
+            </div>
+
+          <!--   <div class="col s12 m4 l4 grid-example"><p>s12 m4</p><p>...</p></div>
+            <div class="col s12 m4 l4 grid-example"><p>s12 m4</p><p>...</p></div>
+            <div class="col s12 m4 l4 grid-example"><p>s12 m4</p><p>...</p></div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="nav-m">
+      <!-- contenido -->
+    </div>
+  </div>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script type="text/javascript">
+    $( document ).ready(function(){
+      $(".button-collapse").sideNav();
+
+      $('#pagos-btn').on('click', function() {
+          $('#transferencias').remove();
+          $('#pagos').show();
+      });
+
+       $('#financiaminto-btn').on('click', function() {
+          $('#transferencias').remove();
+          $('#financiamiento').show();
+      });
+
+    })
+  </script>
+  <script>
+    $(document).ready(function(){
+        $("#nav-m").load("nav.html");
+        // $("transferencias").load("transferencias-module.html");
+    });
+  </script>
+  </body>
+</html>
